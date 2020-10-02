@@ -3,8 +3,8 @@ const width = '600px'
 const height = '600px'
 let cellV = prompt('how many vertical squares?', '16')
 let cellH = prompt('how many horizontal squares?', '16')
-let cellWidth = (parseInt(width, 10)/parseInt(cellH, 10)) -2 + 'px';
-let cellHeight = (parseInt(height, 10)/parseInt(cellV, 10)) -2 + 'px';
+let cellWidth = (parseInt(width, 10)/parseInt(cellH, 10)) + 'px';
+let cellHeight = (parseInt(height, 10)/parseInt(cellV, 10)) + 'px';
 let n = 0;
 let i = 0;
 const bwBtn = document.getElementById('create-grid');
@@ -22,7 +22,6 @@ function createDiv(){
         cell.style.backgroundColor = 'black'})
     cell.style.height = cellHeight
     cell.style.width = cellWidth
-    cell.style.border = '1px solid black'
     container.appendChild(cell)
 }
 
@@ -47,7 +46,6 @@ function createColorfulDiv(){
         colorCell.style.backgroundColor = randomColor})
     colorCell.style.height = cellHeight
     colorCell.style.width = cellWidth
-    colorCell.style.border = '1px solid black'
     container.appendChild(colorCell)
 }
 
